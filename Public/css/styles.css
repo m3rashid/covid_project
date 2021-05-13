@@ -21,14 +21,23 @@ body::-webkit-scrollbar{
 }
 .back-color{
     box-shadow: 0 0 10px 3px rgb(224, 213, 213) ;
+    transform: scale(1);
    }
 
    .back-color:hover{
-    box-shadow: 0 0 10px 5px rgb(224, 213, 213) ;
-    transform: scale(1.03);
+    animation-name: hoverchange;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
     cursor:pointer
    }
-  
+
+   @keyframes hoverchange{
+    from {box-shadow: 0 0 10px 3px rgb(224, 213, 213) ;
+        transform: scale(1);}
+    to {box-shadow: 0 0 10px 5px rgb(224, 213, 213) ;
+        transform: scale(1.05);}
+}
+
 .bi {
     vertical-align: -.125em;
     fill: currentColor;
