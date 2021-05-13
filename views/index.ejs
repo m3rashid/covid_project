@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Tracker</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/3fcd57f42d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar-light bg-dark text-center navigation">
+        <h1 class="text-light text-md-center p-4"><i class="fas fa-user-md p-2"></i>Covid-19 Tracker</h1>
+    </nav>
+
+    <div class="section">
+        <div>
+            <span class="box top">                
+                <img src="<%= url%> " alt="" srcset="" width="20%">
+
+                <h1 id="countryname text-justify"><%= country%> </h1>
+            </span>
+        </div>
+    </div>
+    <div class="section">
+        <div class="box">
+            <div class="row">
+                <div class="col-lg-4">
+                    <i class="fas fa-virus fa-7x p-4"></i>
+                    <h2>Active</h2>
+                    <h4 class="pt-4">
+                        <%= active%>
+                    </h4>
+                    <h5 class="new float-right pt-1">+
+                        <%=todaycase%>
+                    </h5>
+                </div>
+                <div class="col-lg-4">
+                    <i class="fas fa-syringe fa-7x p-4"></i>
+                    <h2>Recovered</h2>
+                    <h4 class="pt-4">
+                        <%= recovered%>
+                    </h4>
+                    <h5 class="new float-right pt-1">+
+                        <%=todayrec%>
+                    </h5>
+                </div>
+                <div class="col-lg-4">
+                    <i class="fas fa-skull-crossbones fa-7x p-4"></i>
+                    <h2>Deaths</h2>
+                    <h4 class="pt-4">
+                        <%= dead%>
+                    </h4>
+                    <h5 class="new float-right pt-1">+
+                        <%=todaydeath%>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="myChart"></canvas>
+    <div class="section">
+        <div class="box">
+            <form action="" method="post" class="flex-column">
+                <h1 class="p-5">Change Country</h1>
+                <div class="form-group-row">
+                    <input type="text" class="form-control" name="country" id="" placeholder="Change Country">
+                    <button type="submit" class="btn btn-outline-dark m-3 shadow-none">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="text-center p-5">
+        &#169; Created by Sarfraz Alam
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="chart.js"></script>
+</body>
+
+</html>
