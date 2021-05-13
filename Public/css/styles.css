@@ -25,7 +25,7 @@ body::-webkit-scrollbar{
 
    .back-color:hover{
     box-shadow: 0 0 10px 5px rgb(224, 213, 213) ;
-    transform: scale(1.02);
+    transform: scale(1.03);
     cursor:pointer
    }
   
