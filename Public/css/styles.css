@@ -1,5 +1,12 @@
+/* Global Styles */
+:root{
+    --light-blue: rgb(87, 178, 214);
+    --dark-blue: rgb(1, 44, 85);
+    --white: rgb(255, 255, 255);
+    --yellow-shadow: rgb(92, 76, 4);
+}
 body{
-    background: linear-gradient(rgb(87, 178, 214), rgb(1, 44, 85), rgb(1, 44, 85));
+    background: linear-gradient(var(--light-blue), var(--dark-blue));
 }
 body::-webkit-scrollbar{
     display: none;
@@ -17,12 +24,18 @@ body::-webkit-scrollbar{
     margin-bottom: 25px;
 }
 .back-color{
-    background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255), rgb(92, 76, 4));
+    background: linear-gradient(var(--white), var(--white), var(--yellow-shadow));
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 8px 0 var(--white);
+}
+.card-img-top{
+    border-radius: 5px;
 }
 
-  
+
 .bi {
     vertical-align: -.125em;
     fill: currentColor;
 }
-  
+
