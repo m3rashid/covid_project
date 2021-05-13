@@ -1,5 +1,8 @@
 body{
-    background: linear-gradient(rgb(87, 178, 214), rgb(1, 44, 85), rgb(1, 44, 85));
+    background: url(../images/background.jpg) no-repeat;
+    background-size: contains;
+    background-position-x: right;
+    background-position-y:bottom;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -17,9 +20,14 @@ body::-webkit-scrollbar{
     margin-bottom: 25px;
 }
 .back-color{
-    background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255), rgb(92, 76, 4));
-}
+    box-shadow: 0 0 10px 3px rgb(224, 213, 213) ;
+   }
 
+   .back-color:hover{
+    box-shadow: 0 0 10px 5px rgb(224, 213, 213) ;
+    transform: scale(1.02);
+    cursor:pointer
+   }
   
 .bi {
     vertical-align: -.125em;
