@@ -1,0 +1,19 @@
+<%- include("header") -%>
+    <div class="show-box text-center">
+        <h1 class="mt-3">Search List</h1>
+        <ul class="row">
+            <%output.forEach(function(item){%>
+
+                <div class="col-lg-4" data-aos="flip-left">
+                    <li class="show-list">
+                        <%=item.text%>
+                            <a href="https://twitter.com/covidsearch/status/<%=item.id%>"> <i class="fab fa-twitter"></i> Full Tweet</a>
+                    </li>
+                </div>
+                <%});%>
+        </ul>
+        <form action="/<%=rq%>/<%=st%>/next/<%=maxid.next_token%>" method="get">
+            <button class="btn btn-outline-dark mb-5 more-btn" type="submit">More</button>
+        </form>
+    </div>
+    <%- include("footer") -%>
