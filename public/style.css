@@ -1,6 +1,8 @@
-    body {
-        background-color: #fafafa;
+    body,
+    html {
+        background-color: #fcfcfc;
         font-family: 'Farro', sans-serif;
+        max-width: 100%!important;
         overflow-x: hidden;
     }
     
@@ -113,6 +115,92 @@
         background: #004a7c;
     }
     
+    .nav-heading {
+        text-decoration: none;
+        color: rgb(116, 116, 116);
+        font-size: 2rem;
+    }
+    
+    .nav-heading:hover {
+        color: black;
+    }
+    
+    .nav-heading-img {
+        width: 7%;
+    }
+    
+    .cv-data {
+        display: inline-block;
+        position: relative;
+        margin-right: 50%;
+        margin-left: 5%;
+        width: 45%;
+        height: 25%;
+        transform: scale(1)!important;
+        border: 1px solid transparent;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.322) inset;
+        padding: 2%;
+        border-radius: 10px;
+        transition: all .5s!important;
+    }
+    
+    .cv-data:hover {
+        /* border: 1px solid rgb(121, 121, 121); */
+        transform: scale(1.1)!important;
+        box-shadow: none;
+    }
+    
+    .cv-data-heading {
+        font-weight: 100;
+        color: rgba(0, 0, 0, 0.527);
+        margin-bottom: 5%;
+    }
+    
+    .cv-data-img {
+        width: 30%;
+        padding: 1%;
+        /* border-right: 1px solid rgb(184, 184, 184); */
+    }
+    
+    .cv-total {
+        margin-left: 3%;
+        font-size: 2rem;
+    }
+    
+    .cv-active {
+        font-size: 1.2rem;
+        color: #6cbff3;
+        position: absolute;
+        bottom: 10%;
+        left: 65%;
+    }
+    
+    .cs-div a {
+        display: inline-block;
+        position: relative;
+        transform: scale(1);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        transition: all .5s!important;
+        /* margin-left: 5%;
+        margin-right: 20%; */
+        text-decoration: none;
+        padding: 1%;
+        width: 45%;
+        font-size: 1.5rem;
+        margin: 2% 20% 2% 5%;
+        color: rgb(100, 100, 100);
+    }
+    
+    .cs-div a:hover {
+        transform: scale(1.1)!important;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.226);
+    }
+    
+    .cs-data-img {
+        width: 20%;
+    }
+    
     @media only screen and (max-width: 600px) {
         .search-form {
             margin: 0.5% 5%;
@@ -125,5 +213,26 @@
         }
         .more-btn {
             width: 20%;
+        }
+        .cv-data {
+            width: 100%;
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+        .cs-div {
+            margin-top: 49%;
+        }
+        .cs-div a {
+            padding: 2%;
+            width: 100%;
+            font-size: 1.2rem;
+            margin: 10% 0%;
+        }
+        .cs-data-img {
+            width: 20%;
+        }
+        .cv-data-heading {
+            font-size: 1.5rem;
+            font-weight: 900;
         }
     }

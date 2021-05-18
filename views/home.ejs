@@ -1,0 +1,48 @@
+<%- include("header") -%>
+
+    <div class="row m-5">
+        <div class="col-lg-6 cv-div">
+            <h1 class="cv-data-heading" data-aos="fade-left">Realtime Covid Data</h1>
+            <div class="cv-data mt-4" data-aos="zoom-in">
+                <img class="cv-data-img" src="/public/images/coronavirus.png" alt="" srcset="">
+                <span class="cv-total counter"><%=info.cases%></span>
+                <span class="cv-active mt-4 ">+<span class="counter"><%=info.todayCases%></span></span>
+            </div>
+            <div class="cv-data mt-4" data-aos="zoom-in">
+                <img class="cv-data-img" src="/public/images/patient.png" alt="" srcset="">
+                <span class="cv-total counter"><%=info.recovered%></span>
+                <span class="cv-active mt-4">+<span class="counter"><%=info.todayRecovered%></span></span>
+            </div>
+            <div class="cv-data mt-4" data-aos="zoom-in">
+                <img class="cv-data-img" src="/public/images/grave.png" alt="" srcset="">
+                <span class="cv-total counter"><%=info.deaths%></span>
+                <span class="cv-active mt-4">+<span class="counter"><%=info.todayDeaths%></span></span>
+            </div>
+        </div>
+        <div class="col-lg-6 cs-div">
+            <h1 class="cv-data-heading" data-aos="fade-right">Find Your Needs</h1>
+            <br>
+            <a class="" href="oxygen-cylinder" data-aos="zoom-in">
+                <img class="cs-data-img" src="/public/images/oxygen-tank.png" alt=""> Oxygen Cylinders
+            </a>
+            <a class="" href="oxygen-beds" data-aos="zoom-in">
+                <img class="cs-data-img" src="/public/images/illness.png" alt=""> Oxygen Beds
+            </a>
+            <a class="" href="remdisivir" data-aos="zoom-in">
+                <img class="cs-data-img" src="/public/images/injection.png" alt=""> Remdisivir
+            </a>
+            <a class="" href="plasma" data-aos="zoom-in">
+                <img class="cs-data-img" src="/public/images/test-tube.png" alt=""> Plasma
+            </a>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <%- include("footer") -%>

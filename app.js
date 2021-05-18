@@ -14,39 +14,62 @@ const client = new Twitter({
 
 
 app.set('view engine', 'ejs');
-async function getdata() {
-    const { data } = await client.get('tweets', { ids: '1228393702244134912' });
-    console.log(data);
+// async function getdata() {
+//     const { data } = await client.get('tweets', { ids: '1228393702244134912' });
+//     console.log(data);
 
-}
+// }
 
-function main() {
-    client.get('search/tweets', { query: 'delhi oxygen bed' }, function(error, tweets, response) {
-        if (!error) {
-            console.log(tweets);
-        } else {
-            console.log(error);
-        }
-    });
-}
+// function main() {
+//     client.get('search/tweets', { query: 'delhi oxygen bed' }, function(error, tweets, response) {
+//         if (!error) {
+//             console.log(tweets);
+//         } else {
+//             console.log(error);
+//         }
+//     });
+// }
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/public', express.static("public"));
 
 app.get('/', function(req, res) {
+    const url = "https://corona.lmao.ninja/v2/countries/India?strict=true&yesterday=true#";
+
+    axios.get(url).then(function(respone) {
+        console.log(respone.data);
+        res.render('home', {
+            info: respone.data
+        });
+    }).catch(function(error) {
+        console.log(error);
+    });
+
+
+});
+
+
+
+// app.post('/', function(req, res) {
+//     let requirement = req.body.requirement;
+//     let state = req.body.state;
+//     res.redirect('/' + requirement + '/' + state + '/search');
+// });
+
+app.get('/:rq', function(req, res) {
     axios.post('https://countriesnow.space/api/v0.1/countries/cities', {
         country: 'india'
     }).then(function(response) {
-        // console.log(res.data.data);
+        console.log(response);
         res.render('search', {
-            states: response.data.data
+            states: response.data.data,
+            rq: req.params.rq
         });
     });
 });
 
-app.post('/', function(req, res) {
-    let requirement = req.body.requirement;
-    let state = req.body.state;
-    res.redirect('/' + requirement + '/' + state + '/search');
+app.post('/:rq', function(req, res) {
+    res.redirect("/" + req.params.rq + "/" + req.body.state + "/search");
 });
 
 app.get('/:rq/:st/search', async function(req, res) {

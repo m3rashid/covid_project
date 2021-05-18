@@ -1,18 +1,9 @@
 <%- include("header") -%>
 
-    <div class="text-center mt-5 search-form" data-aos="fade-up">
+    <div class="text-center mt-5 search-form" data-aos="fade-left">
         <h1 class="pt-5 pb-2">Search Tweets</h1>
-        <p>Fill your requirement and get resulted tweets</p>
-        <form class=" text-center" action="/" method="post">
-            <br>
-            <select class="form-control text-center mt-2 mb-2 search-rq-form color-darkblue" name="requirement" id="">
-                <option value="oxygencylinders">Oxygen Cylinders</option>
-                <option value="oxygenbeds">Oxygen Beds</option>
-                <option value="remdisivir">Remdisivir</option>
-                <option value="plasma">Plasma</option>
-              </select>
-
-            <!-- <input class="form-control text-center mt-2 mb-2 search-rq-form color-darkblue" type="text" name="state" id="" placeholder="Enter State"> -->
+        <p>Select Your State</p>
+        <form class=" text-center" action="/<%=rq%>" method="post">
             <br>
             <select class="form-control text-center mt-2 mb-2 search-rq-form color-darkblue" name="state" id="">
                 <%states.forEach(function(state){%>
