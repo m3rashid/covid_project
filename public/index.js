@@ -9,7 +9,7 @@
         var dates = [];
         var cases = [];
         var recovered = [];
-        for (var i = data.cases_time_series.length - 5; i < data.cases_time_series.length; i++) {
+        for (var i = data.cases_time_series.length - 50; i < data.cases_time_series.length; i++) {
             dates.push(data.cases_time_series[i].date);
             cases.push(data.cases_time_series[i].totalconfirmed);
             recovered.push(data.cases_time_series[i].totalrecovered)
