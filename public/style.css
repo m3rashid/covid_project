@@ -201,6 +201,13 @@
         width: 20%;
     }
     
+    canvas {
+        margin-left: 5%;
+        width: 90vw!important;
+        height: 90vh!important;
+        max-height: 500px;
+    }
+    
     @media only screen and (max-width: 600px) {
         .search-form {
             margin: 0.5% 5%;
@@ -235,4 +242,7 @@
             font-size: 1.5rem;
             font-weight: 900;
         }
+        /* canvas {
+            height: 45vh!important;
+        } */
     }
