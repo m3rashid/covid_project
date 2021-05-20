@@ -9,28 +9,39 @@
         var dates = [];
         var cases = [];
         var recovered = [];
-        for (var i = data.cases_time_series.length - 50; i < data.cases_time_series.length; i++) {
+        var Deaths = [];
+        for (var i = data.cases_time_series.length - 40; i < data.cases_time_series.length; i++) {
             dates.push(data.cases_time_series[i].date);
             cases.push(data.cases_time_series[i].totalconfirmed);
-            recovered.push(data.cases_time_series[i].totalrecovered)
+            recovered.push(data.cases_time_series[i].totalrecovered);
+            Deaths.push(data.cases_time_series[i].deaths);
         }
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
+
                 labels: dates,
                 datasets: [{
-                        label: '# total cases',
-                        data: cases,
-                        fill: false,
-                        borderWidth: 1
-                    }]
-                    // , {
-                    //     label: '# Recoveries',
-                    //     data: recovered,
-                    //     fill: false,
-                    //     backgroundColor: 'rgba(255, 99, 132, 1)',
-                    //     borderColor: 'rgba(255, 99, 132, 0.9)'
+                    label: 'Total cases',
+                    data: cases,
+                    backgroundColor: 'rgba(255, 99, 132, 1)',
+                    fill: false,
+                    borderWidth: 0
+                },
+                {
+                    label: 'Recovered cases',
+                    data: recovered,
+                    backgroundColor: 'rgba(0, 99, 132, 1)',
+                    fill: false,
+                    borderWidth: 0
+                }]
+                // , {
+                //     label: '# Recoveries',
+                //     data: recovered,
+                //     fill: false,
+                //     backgroundColor: 'rgba(255, 99, 132, 1)',
+                //     borderColor: 'rgba(255, 99, 132, 0.9)'
 
                 // }]
             },
@@ -54,7 +65,7 @@
                     },
                     xAxes: [{
                         ticks: {
-                            fontSize: 16
+                            fontSize: 14
                         }
                     }]
 

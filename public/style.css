@@ -5,7 +5,18 @@
         max-width: 100%!important;
         overflow-x: hidden;
     }
-    
+    .background{
+        position: absolute;
+        right: 0%;
+        opacity: .2;
+        scroll-margin-bottom:initial;
+    }
+    body {
+        background-image: url("/public/images/background.jpg");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-attachment: fixed;
+    }
     .color-darkblue {
         color: #004a7c!important;
     }
